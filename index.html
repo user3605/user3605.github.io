@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SRDZN94Y0F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-SRDZN94Y0F');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage of Yingqi Liu</title>
+    <style>
+        :root {
+            --bg-color: #f9fafb;
+            --container-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --border-color: #e5e7eb;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+            --card-bg: #ffffff;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #0f172a;
+            --container-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #cbd5e1;
+            --primary-color: #3b82f6;
+            --primary-hover: #60a5fa;
+            --border-color: #334155;
+            --badge-bg: #334155;
+            --badge-text: #93c5fd;
+            --card-bg: #1e293b;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+            --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.7);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0 20px 60px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        button.theme-toggle {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 2px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        button.theme-toggle:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 60px;
+            padding: 40px;
+            background-color: var(--container-bg);
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, var(--primary-color), #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero-bio {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 90%;
+        }
+
+        .hero-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: var(--border-color);
+            object-fit: cover;
+            border: 4px solid var(--container-bg);
+            box-shadow: 0 0 0 4px var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #ffffff !important;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main) !important;
+            border: 2px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color) !important;
+            transform: translateY(-2px);
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        h2.section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2.section-title::after {
+            content: "";
+            height: 2px;
+            flex: 1;
+            background-color: var(--border-color);
+            margin-left: 15px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow-hover);
+            border-color: var(--primary-color);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 180px;
+            background-color: #e2e8f0;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .project-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .project-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .project-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .project-desc {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .tag {
+            background-color: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .list-container {
+            background-color: var(--container-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .edu-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .edu-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .item-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .item-meta {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .item-sub {
+            font-size: 15px;
+            color: var(--text-main);
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .hero-bio {
+                margin: 0 auto 30px auto;
+            }
+            .action-buttons {
+                justify-content: center;
+            }
+            .item-header {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+        </nav>
+
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Yingqi Liu</span> 👋</h1>
+                <div class="hero-subtitle">Software Engineer | AI Enthusiast</div>
+                <p class="hero-bio">
+                    I am a Master's student in Computer Science (expected to graduate in 2027), with the advisement of Prof. <a href="https://ccvcl.org/professor-zhigang-zhu/" target="_blank">Zhigang Zhu</a>.
+                    My passion lies in building scalable backend systems, solving complex algorithmic challenges and exploring computer vision.
+                    <br>
+                    <strong>Now I am actively seeking a Software Engineering Internship or a Research Assistant position for Summer 2026.</strong>
+                </p>
+                <div class="action-buttons">
+                    <a href="./DOCUMENTS/Yingqi_Liu_Resume.pdf" target="_blank" class="btn btn-primary">📄 View Resume</a>
+                    <a href="https://github.com/user3605" target="_blank" class="btn btn-secondary">💻 My GitHub</a>
+                    <a href="https://www.linkedin.com/in/yingqi-liu-2077393ba" target="_blank" class="btn btn-secondary">🔗 My LinkedIn</a>
+                    <button class="btn btn-secondary" onclick="copyEmail(this)">✉️ Email Me</button>
+                </div>
+            </div>
+            <img src="./DOCUMENTS/Profile_Picture.jpg" class="hero-avatar">
+        </header>
+        
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="list-container">
+                <div class="edu-item">
+                    <div class="item-header">
+                        <h3 class="item-title"><a href="https://www.cuny.edu/" target="_blank">The City University of New York</a></h3>
+                        <span class="item-meta">Aug 2025 - Expected Jun 2027</span>
+                    </div>
+                    <div class="item-sub">M.S. in Computer Science | Cumulative GPA: 3.9</div>
+                </div>
+                
+                <div class="edu-item">
+                    <div class="item-header">
+                        <h3 class="item-title"><a href="https://www.dlut.edu.cn/" target="_blank">Dalian University of Technology</a></h3>
+                        <span class="item-meta">Sep 2021 - Jun 2025</span>
+                    </div>
+                    <div class="item-sub">B.Eng. in Software Engineering | Cumulative GPA: 3.68</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600" alt="Bug Management System" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title"><a href="https://github.com/user3605/Neusoft-Bug-Management-System" target="_blank">Bug Management System</a></h3>
+                        <p class="project-desc">A backend-focused bug tracking system developed during a corporate-led practicum at Neusoft. Piloted internally to effectively improve project team efficiency.</p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&q=80&w=600" alt="Image Recognition Model" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title"><a href="https://github.com/user3605/ImageRecognition-Models-On-PYNQ-Z2" target="_blank">Image Recognition Model</a></h3>
+                        <p class="project-desc">A national-level funded project deploying an image detection algorithm on the PYNQ-Z2 board. Real-time capture and classification of mask-wearing status.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">VHDL</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Beyond Code</h2>
+            <div class="list-container" style="color: var(--text-muted); font-size: 15px;">
+                <p style="margin-bottom: 15px;">When I'm not building systems or practicing algorithms, I enjoy a balance of active and creative hobbies:</p>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>🏀 <strong>Sports:</strong> Passionate basketball fan following the NBA, and love hitting the court for a game.</li>
+                    <li>📷 <strong>Photography:</strong> I enjoy exploring cities and capturing street views and landscapes through my camera lens.</li>
+                    <li>🎮 <strong>Gaming:</strong> Big fan of action-adventure and co-op games (always looking for a good run in It Takes Two or Civilization VI).</li>
+                </ul>
+            </div>
+        </section>
+        
+        <footer style="text-align: center; color: var(--text-muted); font-size: 14px; border-top: 1px solid var(--border-color); padding-top: 20px;">
+            &copy; 2026 Yingqi Liu. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.documentElement;
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+            }
+        }
+
+        function copyEmail(button) {
+            const email = "YINGQI.LIU30@cuny.edu";
+
+            navigator.clipboard.writeText(email).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = "✅ Copied!";
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
